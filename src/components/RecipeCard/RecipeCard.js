@@ -10,6 +10,7 @@ let RecipeCard = props => {
     ingredients,
     instructions
   } = props;
+ 
   const ingredientsDisplay = ingredients.map((ingredient, i) => {
     return <li key={i}>{ingredient}</li>;
   });
@@ -34,6 +35,7 @@ let RecipeCard = props => {
         <ol className="list">{instructionsDisplay}</ol>
       </div>
       <svg
+        onClick={props.deleteAll}
         className="delete"
         width="60"
         height="60"
